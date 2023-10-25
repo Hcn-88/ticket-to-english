@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body{
+  background: #c7c6c6;
+}
+
+.wrapper{
+  width: 80%;
+  margin: 0px auto;
+}
+
+main{
+  min-height: calc(100vh - 120px);
+}
+
+@media(max-width: 970px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+@media(max-width: 370px) {
+  .wrapper {
+      width: 100%;
+      padding: 0px 20px;
+    }
+}

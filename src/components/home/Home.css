@@ -1,0 +1,91 @@
+.home {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        'world business'
+        'world general';
+}
+
+.home div {
+    grid-area: world;
+    min-height: 450px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../public/images/world.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.home h2 {
+    margin-bottom: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+.home p {
+    color: #fff;
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+.home .business,
+.general {
+    background-position: center;
+    background-size: cover;
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    transition: .8s;
+}
+
+.home .business {
+    grid-area: business;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../../public/images/business.jpg);
+}
+
+.home .general {
+    grid-area: general;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../../public/images/general.jpeg);
+}
+
+.home h3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+}
+
+.home a:hover {
+    transform: scale(1.1);
+}
+
+@media(max-width: 660px) {
+    .home {
+        grid-template-areas:
+            'world world'
+            'business general';
+    }
+    .home div {
+        grid-area: world;
+        min-height: 250px;
+    }
+    .home .business {
+        grid-area: business;
+        min-height: 200px;
+    }
+    .home .general {
+        grid-area: general;
+    }
+    .home h3 {
+        font-size: 1.1rem;
+        /* text-align: center; */
+    }
+}

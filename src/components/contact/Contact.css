@@ -1,0 +1,88 @@
+.contact {
+    padding: 50px 0px;
+    background: #ddd;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.contact p{
+    text-align: center;
+    margin: 0px 0px 20px;
+    color: #d32828;
+}
+
+form {
+    width: 60%;
+    margin: 0px auto;
+}
+
+form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.contact div,
+input,
+textarea {
+    width: 100%;
+}
+
+.contact input,
+textarea {
+    padding: 7px;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact textarea {
+    resize: none;
+}
+
+.contact button {
+    display: block;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 4px 0px;
+    margin-top: -10px;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #c0bfbf;
+}
+
+form div {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+form label {
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 6px;
+    cursor: text;
+    transition: .2s;
+}
+
+.contact input:focus~label,
+.contact input:valid~label,
+.contact textarea:focus~label,
+.contact textarea:valid~label {
+    top: -30px;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+@media(max-width: 650px){
+    form {
+        width: 90%;
+    }
+}
+

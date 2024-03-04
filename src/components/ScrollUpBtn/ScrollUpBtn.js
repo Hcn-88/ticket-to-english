@@ -11,11 +11,9 @@ class ScrollUpBtn extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 10) {
-        this.setState({ show: true });
-      } else {
-        this.setState({ show: false });
-      }
+      window.scrollY > 10
+        ? this.setState({ show: true })
+        : this.setState({ show: false });
     });
   }
 
